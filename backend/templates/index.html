@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tesla Clone</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <style id="no-scroll-style">
+    html {
+      scroll-behavior: auto !important;
+      overflow-y: hidden;
+    }
+  </style>
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">
+  <a href="/">
+    <img src="https://i.postimg.cc/LXpkcxXM/Tesla-Inc-Wordmark-White-Logo-wine.png" alt="Tesla Logo">
+  </a>
+</div>
+
+    <nav>
+      <a href="#cars">Cars</a>
+      <a href="#energy">Energy</a>
+      <a href="#about">About</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <video autoplay muted loop playsinline class="background-video">
+      <source src="https://res.cloudinary.com/dsmu8e5lm/video/upload/v1749925621/CYBERTRUCK_efmgmz.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+
+    <div class="hero-text">
+      <h1>Experience the Future</h1>
+      <p>Electric Power Meets Innovation</p>
+      <div class="cta">
+        <a href="#cars" class="btn">Order Now</a>
+        <a href="#energy" class="btn btn-outline">Learn More</a>
+      </div>
+    </div>
+  </section>
+
+<section id="cars" class="product-section">
+  <h2>Cars</h2>
+  <div class="tile-container">
+
+    <!-- Cybertruck Tile with Link -->
+    <a href="/cybertruck" class="tile animate" style="text-decoration: none; color: inherit;">
+      <img src="https://i.postimg.cc/85X8KfpM/image-2025-06-15-032653187.png" alt="Cybertruck" class="tile-img">
+      <h3>Cybertruck</h3>
+      <p>Bold Design. Unmatched Utility.</p>
+    </a>
+
+    <!-- Model 3 Tile -->
+    <div class="tile animate">
+      <img src="https://i.postimg.cc/d0ng3ZTp/image-2025-06-15-033732380.png" alt="Model 3" class="tile-img">
+      <h3>Model 3</h3>
+      <p>Affordable & Efficient</p>
+    </div>
+
+    <!-- Model S Tile -->
+    <div class="tile animate">
+      <img src="https://i.postimg.cc/d0JzJjDG/image-2025-06-15-033633973.png" alt="Model S" class="tile-img">
+      <h3>Model S</h3>
+      <p>Luxury & Style</p>
+    </div>
+
+  </div>
+</section>
+
+
+
+
+
+<section id="energy" class="product-section">
+  <h2>Energy</h2>
+  <div class="tile-container">
+    <div class="tile animate">
+<img src="https://i.postimg.cc/k44zbMQ4/image-2025-06-15-033947774.png" alt="solar roof" class="tile-img">
+      <h3>Solar Roof</h3>
+      <p>Clean, Durable Energy</p>
+    </div>
+    <div class="tile animate">
+<img src="https://i.postimg.cc/jCVFmzGw/image-2025-06-15-034126234.png" alt="powerwall" class="tile-img-energy">
+      <h3>Powerwall</h3>
+      <p>Home Energy Storage</p>
+    </div>
+    <div class="tile animate">
+<img src="https://i.postimg.cc/pV9XNRwR/image-2025-06-15-034431929.png" alt="Megapack" class="tile-img-energy">
+      <h3>Megapack</h3>
+      <p>Build a Cleaner Grid</p>
+    </div>
+  </div>
+</section>
+
+
+
+  <section id="about">
+  <h2>About Tesla</h2>
+  <p>Tesla is accelerating the world's transition to sustainable energy by building a scalable clean energy ecosystem—from generation and storage to electric vehicles.</p>
+</section>
+
+
+  <script>
+    // Scroll fix on load
+    if ('scrollRestoration' in history) {
+      history.scrollRestoration = 'manual';
+    }
+
+    window.addEventListener('load', () => {
+      window.scrollTo(0, 0);
+      const styleTag = document.getElementById('no-scroll-style');
+      if (styleTag) styleTag.remove();
+    });
+
+    // Animate elements when in viewport
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.2 });
+
+    document.querySelectorAll('.animate').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>

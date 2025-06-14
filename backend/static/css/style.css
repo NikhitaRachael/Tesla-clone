@@ -1,0 +1,270 @@
+/* Reset & Base */
+html{
+background:#111;
+}
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  scroll-behavior: smooth;
+  color: white;
+}
+
+.body-product {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  scroll-behavior: smooth;
+  color: white;
+  background: #111;
+}
+/* Navbar */
+/* Navbar */
+.navbar {
+  position: sticky;
+  top: 0;
+  background: rgba(0, 0, 0, 0.85);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 2rem;
+  height: 80px;
+  z-index: 1000;
+}
+
+/* Fix logo size without affecting navbar height */
+.navbar .logo img {
+  height: 150px;
+  width: auto;
+  object-fit: contain;
+}
+
+/* Navigation links remain vertically aligned */
+.navbar nav {
+  display: flex;
+  align-items: center;
+}
+
+.navbar nav a {
+  position: relative;
+  margin-left: 20px;
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.navbar nav a::after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: white;
+  transition: width 0.3s ease;
+}
+
+.navbar nav a:hover {
+  color: #ddd;
+}
+
+.navbar nav a:hover::after {
+  width: 100%;
+}
+
+.navbar nav a {
+  position: relative;
+  margin-left: 20px;
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.navbar nav a::after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: white;
+  transition: width 0.3s ease;
+}
+
+.navbar nav a:hover {
+  color: #ddd;
+}
+
+.navbar nav a:hover::after {
+  width: 100%;
+}
+
+
+/* Hero Section */
+.hero {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.background-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: auto;
+  height: 130%;
+  transform: translate(-50%, -50%) scale(1.1);
+  object-fit: cover;
+  z-index: -1;
+}
+
+.hero-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.hero-text h1 {
+  font-size: 3rem;
+  margin: 0;
+}
+
+.hero-text p {
+  font-size: 1.2rem;
+  margin: 0.5rem 0 1rem;
+}
+
+.cta .btn {
+  padding: 0.8rem 1.5rem;
+  margin: 0.5rem;
+  background: white;
+  color: black;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.cta .btn-outline {
+  background: transparent;
+  border: 2px solid white;
+  color: white;
+}
+
+.cta .btn:hover {
+  opacity: 0.8;
+}
+
+/* Product Section */
+.product-section {
+  padding: 4rem 2rem;
+  text-align: center;
+  background: #111;
+}
+
+.product-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+/* Tiles Layout */
+.tile-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10rem;
+  margin-top: 2rem;
+}
+
+.tile {
+  background: #1a1a1a;
+  padding: 2rem 1.5rem 1rem;
+  border-radius: 12px;
+  width: 280px;
+  min-height: 180px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.5s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  font-size: 1.1rem;
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  opacity: 0;
+  transform: translateY(40px);
+  overflow: visible;
+  position: relative;
+}
+
+/* Animation Trigger */
+.tile.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Hover Effects */
+.tile:hover {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 12px 25px rgba(255, 255, 255, 0.2);
+  background: #2a2a2a;
+}
+
+/* Image Support for Transparent PNGs */
+.tile img.tile-img {
+  width: 400px;
+  max-height: 500px;
+  object-fit: contain;
+  margin-bottom: 1rem;
+  pointer-events: none;
+  transition: transform 0.3s ease;
+}
+.tile img.tile-img-energy {
+  width: 500px;
+  max-height: 500px;
+  object-fit: contain;
+  margin-bottom: 1rem;
+  pointer-events: none;
+  transition: transform 0.3s ease;
+}
+
+
+/* Slight image scale on hover */
+.tile:hover img.tile-img {
+  transform: scale(1.05);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .tile {
+    width: 100%;
+    max-width: 90vw;
+  }
+}
+/* Footer / About Section */
+#about {
+  background-color: black;
+  padding: 3rem 2rem;
+  text-align: center;
+  color: #aaa;
+  font-size: 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+#about h2 {
+  color: white;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+#about p {
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
