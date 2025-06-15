@@ -20,6 +20,7 @@ Frontend URL (Vercel): [https://tesla-clone-frontend.vercel.app](https://tesla-c
 Tesla-clone/
 ├── app.py
 ├── requirements.txt
+├── render.yaml
 ├── templates/
 │ ├── index.html
 │ ├── cybertruck.html
