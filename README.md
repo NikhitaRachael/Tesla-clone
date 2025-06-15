@@ -12,7 +12,7 @@ Frontend URL (Vercel): [https://tesla-clone-frontend.vercel.app](https://tesla-c
 ---
 # Tesla Clone Frontend Repository (Vercel)
 
-[https://github.com/NikhitaRachael/Tesla-clone-Frontend.com](https://github.com/NikhitaRachael/Tesla-clone-Frontend.com)
+[https://github.com/NikhitaRachael/Tesla-clone-Frontend](https://github.com/NikhitaRachael/Tesla-clone-Frontend)
 
 ---
 ## 📁 Project Structure
