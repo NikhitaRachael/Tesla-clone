@@ -80,5 +80,4 @@ Deploy!
 This project is licensed for educational and portfolio use. Not affiliated with Tesla, Inc.
 
 ## 👩‍💻 Author
-Nikhita Rachael
-GitHub
+Nikhita Rachael | GitHub
