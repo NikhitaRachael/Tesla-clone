@@ -10,9 +10,13 @@ Backend URL (Render): [https://tesla-clone-56tq.onrender.com](https://tesla-clon
 Frontend URL (Vercel): [https://tesla-clone-frontend.vercel.app](https://tesla-clone-frontend.vercel.app)
 
 ---
+# Tesla Clone Frontend Repository (Vercel)
 
+[https://github.com/NikhitaRachael/Tesla-clone-Frontend.com](https://github.com/NikhitaRachael/Tesla-clone-Frontend.com)
+
+---
 ## 📁 Project Structure
-
+```
 Tesla-clone/
 ├── app.py
 ├── requirements.txt
@@ -23,7 +27,7 @@ Tesla-clone/
 └── static/
 └── css/
 └── style.css
-
+```
 
 ---
 
